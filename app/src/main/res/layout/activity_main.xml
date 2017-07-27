@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/message_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+
+        android:text="Type to Toast"
+
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/message_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_text_view"
+        android:layout_marginTop="19dp"
+        android:hint="Toast me"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp">
+
+        <RadioButton
+            android:id="@+id/min10_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="true"
+            android:text="10 minutes" />
+
+        <RadioButton
+            android:id="@+id/min30_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:text="30 minutes " />
+
+
+        <RadioButton
+            android:id="@+id/hour1_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="1 hour"
+             />
+
+
+
+        <RadioButton
+            android:id="@+id/custom_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Custom"
+             />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/custom_edit_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginTop="15dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:inputType="number"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/custom_minutes_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_toEndOf="@id/custom_edit_text_view"
+        android:text="minutes"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/custom_error_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please input between 1 min and 3 hours"
+        android:layout_below="@+id/custom_edit_text_view"
+        android:layout_alignStart="@+id/message_text_view"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/custom_error_text_view"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/toast_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+             />
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
