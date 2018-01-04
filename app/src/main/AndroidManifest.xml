@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         
-        <receiver android:name=".AlarmToastReceiver"></receiver>
+        <receiver android:enabled="true" android:name=".AlarmToastReceiver">
+z
+
+
+        </receiver>
 
         <receiver android:enabled="true" android:name=".BootUpReceiver"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
